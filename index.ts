@@ -1,6 +1,10 @@
 import {IInputs, IOutputs} from "./generated/ManifestTypes";
 import DataSetInterfaces = ComponentFramework.PropertyHelper.DataSetApi;
 type DataSet = ComponentFramework.PropertyTypes.DataSet;
+import {YearCalendar, Event} from './Controls/YearCalendarControl';
+import * as ReactDOM from 'react-dom';
+import * as React from 'react';
+
 
 export class YearCalendarControl implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 
@@ -12,6 +16,9 @@ export class YearCalendarControl implements ComponentFramework.StandardControl<I
 
 	}
 
+	private container:HTMLDivElement;
+	private context: ComponentFramework.Context<IInputs>;
+	private Language?:string = undefined;
 	/**
 	 * Used to initialize the control instance. Controls can kick off remote server calls and other initialization actions here.
 	 * Data-set values are not initialized here, use updateView.
@@ -23,6 +30,8 @@ export class YearCalendarControl implements ComponentFramework.StandardControl<I
 	public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement)
 	{
 		// Add control initialization code
+		this.container = container;
+		this.context = context;
 	}
 
 
@@ -33,6 +42,22 @@ export class YearCalendarControl implements ComponentFramework.StandardControl<I
 	public updateView(context: ComponentFramework.Context<IInputs>): void
 	{
 		// Add code to update control view
+		
+
+		let Events:Event[];
+		Events = [];
+		Events.push({
+			id: "1",
+			startDate: new Date(2020, 11, 1, 0,0,0),
+			endDate: new Date(2020, 11, 1, 1, 0, 0),
+			name: "hola"
+		});
+
+		let props={
+			Language: this.Language,
+			Events: Events
+		};
+		ReactDOM.render(React.createElement(YearCalendar,props), this.container);
 	}
 
 	/** 
