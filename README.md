@@ -6,6 +6,8 @@ This control works in Model Drive Apps in Microsoft DataVerse.
 
 You must define the name of fields of the Table in Microsoft DataVerse in Index.ts between the lines 18-21.
 
-### Releases ###
+## Releases ##
 
 [V1.0.0.0](https://github.com/eromerof/YearCalendarControl/releases/tag/1.0.0.0)
+
+## Blog Post ##
