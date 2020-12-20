@@ -28,19 +28,16 @@ export class YearCalendar extends React.Component<{ Events: Event[], Language?: 
     }
     public render(): JSX.Element {
         const { Language, Events } = this.state;
-        return (<Calendar dataSource={Events} onDayEnter={this.OnDayClick} language={Language}></Calendar>);
+        return (<Calendar dataSource={Events} onDayEnter={this.OnDayHover} language={Language}></Calendar>);
     }
 
-    private OnDayClick(CurrentElement: any) {
-        // let props:HoverCardOptions={
-        //     element: CurrentElement.element
-        // };
-        // let day = CurrentElement.date.getDate()
-        //  debugger;
-          ReactDOM.render(React.createElement(HoverCardControl), CurrentElement.element);
+    
+    private OnDayHover(CurrentElement: any) {
+        let props: HoverCardOptions = {
+            CurrentDate: CurrentElement.date,
+            Events:CurrentElement.events
+        };
+        if (CurrentElement.events.length > 0)
+            ReactDOM.render(React.createElement(HoverCardControl, props), CurrentElement.element);
     }
 }
-
-
-// export const YearCalendar: React.FunctionComponent = () => {
-//     return (<Calendar></Calendar>);};
