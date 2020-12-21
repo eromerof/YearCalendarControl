@@ -11,4 +11,6 @@ You must define the name of fields of the Table in Microsoft DataVerse in Index.
 
 [V1.0.0.0](https://github.com/eromerof/YearCalendarControl/releases/tag/1.0.0.0)
 
-## Blog Post ##
+## How To Configure ##
+
+[Configure Year Calendar Control](https://dynamicsbox.es/configure-year-calendar-control/)
