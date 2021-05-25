@@ -1,6 +1,6 @@
 # YearCalendarControl #
 
-![alt text](http://dynamicsbox.es/wordpress/wp-content/uploads/2020/12/Captura-de-pantalla-2020-12-20-a-las-15.52.40.png)
+![alt text](https://dynamicsbox.es/wordpress/wp-content/uploads/2020/12/Captura-de-pantalla-2020-12-20-a-las-15.52.40.png)
 
 This control is based on [React Year Calendar Project](https://github.com/year-calendar/rc-year-calendar) and [Fluent UI FrameWork](https://developer.microsoft.com/es-es/fluentui#/).
 This control works in Model Drive Apps in Microsoft DataVerse. 
